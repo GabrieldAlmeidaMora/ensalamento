@@ -1,7 +1,19 @@
-Sistemas de Informação
-Universidade do Estado de Mato Grosso UNEMAT - Campus Universitário de Sinop
+# 🏫 Sistema de Ensalamento de Salas
 
-Gabriel de Almeida Moraes
-Matheus Reis Barros
+Sistema web para **reserva e gerenciamento de salas** em instituições acadêmicas. Permite o cadastro, edição e controle do status das salas disponíveis para uso.
 
-Sistema de ensalmente de salas, onde se pode reservar e gerenciar as salas cadastradas
+## 📚 Projeto desenvolvido por
+- **Gabriel de Almeida Moraes**
+- **Matheus Reis Barros**  
+Curso de **Sistemas de Informação**  
+**Universidade do Estado de Mato Grosso (UNEMAT)** – Campus Universitário de Sinop
+
+---
+
+## 🚀 Funcionalidades
+
+- ✅ Cadastro de salas
+- ✅ Edição e exclusão de salas existentes
+- ✅ Visualização do status da sala (livre, ocupada, etc.)
+- ✅ Atualização automática de status
+- ✅ Integração com autenticação via Supabase
