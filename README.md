@@ -8,6 +8,7 @@ Sistema web para **reserva e gerenciamento de salas** em instituições acadêmi
 Curso de **Sistemas de Informação**  
 **Universidade do Estado de Mato Grosso (UNEMAT)** – Campus Universitário de Sinop
 
+- Configurar .env e banco, caso for rodar localmente
 ---
 
 ## 🚀 Funcionalidades
