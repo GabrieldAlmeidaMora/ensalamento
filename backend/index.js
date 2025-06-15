@@ -10,6 +10,20 @@ app.use(express.json());
 
 // Configuração da conexão com o MySQL
 
+app.use(cors({
+  origin: 'http://85.209.95.52:3002',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}))
+
+// Tratar preflight OPTIONS
+app.use((req, res, next) => {
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200)
+  }
+  next()
+})
 
 // Rotas para Salas
 app.get('/api/salas', room.getRooms);

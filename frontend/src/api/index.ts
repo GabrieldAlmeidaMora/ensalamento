@@ -2,7 +2,7 @@ import axios from 'axios'
 import { supabase } from '@/plugins/supabase'
 
 const api = axios.create({
-  baseURL: 'http://localhost:3001/api', // Usa o proxy configurado no Vite
+  baseURL: 'http://85.209.95.52:8002/api', // Usa o proxy configurado no Vite
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json',

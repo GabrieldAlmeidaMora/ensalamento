@@ -2,6 +2,8 @@
 import { defineStore } from 'pinia'
 import { supabase } from '@/plugins/supabase'
 
+
+
 export const useAppStore = defineStore('app', {
   state: () => ({
     user: null as any | null,
