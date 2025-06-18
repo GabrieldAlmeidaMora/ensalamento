@@ -1,18 +1,4 @@
 <template>
-  <v-app-bar color="primary" dark>
-    <v-toolbar-title class="text-h6">Meu App</v-toolbar-title>
-
-    <v-spacer />
-
-    <v-btn class="mx-1" icon :title="'Home'" to="/">
-      <v-icon>mdi-home</v-icon>
-    </v-btn>
-
-    <v-btn class="mx-1" icon :title="'Dashboard'" to="/dashboard">
-      <v-icon>mdi-view-dashboard</v-icon>
-    </v-btn>
-  </v-app-bar>
-
   <v-container>
 
     <v-row class="justify-space-between align-center mb-4">

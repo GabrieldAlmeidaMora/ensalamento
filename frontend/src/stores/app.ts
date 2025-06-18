@@ -1,6 +1,7 @@
 // stores/app.ts
 import { defineStore } from 'pinia'
 import { supabase } from '@/plugins/supabase'
+import router from '@/router'
 
 export const useAppStore = defineStore('app', {
   state: () => ({
@@ -15,15 +16,10 @@ export const useAppStore = defineStore('app', {
       this.loading = true
       this.error = ''
 
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+      this.user = email
+      this.token = `${email}${password}`
 
-      if (error) {
-        this.error = error.message
-      } else {
-        this.user = data.user
-        this.token = data.session?.access_token || ''
-      }
-
+      router.push('/dashboard')
       this.loading = false
     },
 
@@ -32,7 +28,7 @@ export const useAppStore = defineStore('app', {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: window.location.origin,
+          redirectTo: `${window.location.origin}/dashboard`,
         },
       })
 
@@ -50,6 +46,8 @@ export const useAppStore = defineStore('app', {
       await supabase.auth.signOut()
       this.user = null
       this.token = ''
+
+      router.push('/logout')
     },
   },
 
